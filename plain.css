@@ -1,0 +1,31 @@
+body {
+  quotes: '\201c' '\201d' '\2018' '\2019';
+  counter-reset: chapter;
+}
+
+h1 {
+  counter-reset: chapter;
+}
+
+h2:before {
+  counter-increment: chapter;
+  content: "Chapter " counter(chapter) ": ";
+}
+
+/* q { font-style: italic; } */
+q:before { content: open-quote; }
+q:after  { content: close-quote; }
+
+.footlinks {
+  font-weight: bold;
+}
+
+.clear {
+  margin-bottom: 50em;
+}
+
+.txt {
+  padding:15px;
+  font-family: monospace;
+  display: flex;
+}
